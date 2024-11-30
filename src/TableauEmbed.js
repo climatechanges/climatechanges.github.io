@@ -11,7 +11,7 @@ const TableauEmbed = ({ url }) => {
     };
   }, [url]);
 
-  return <div ref={ref} style={{ width: '50%', height: '600px' }}></div>;
+  return <div ref={ref} style={{ width: '100%', height: '600px' }}></div>;
 };
 
 export default TableauEmbed;

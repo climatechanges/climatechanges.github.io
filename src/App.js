@@ -7,6 +7,7 @@ import { forestWildfiresSpec, populationWildfiresSpec,
   populationHotDaysSpec, landViolentStormsSpec, 
   landRiverFloodingSpec, landExtremePrecipitationSpec,
   landCoastalFloodingSpec} from './sanddanceSpecs.js'
+import Earth from './globe_spinning.gif';
 
 function App() {
   const sumOfExposureValues = 'https://public.tableau.com/views/SumExposureMap/Dashboard12?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
@@ -17,9 +18,108 @@ function App() {
   const nationalAndStateRiskLevel = 'https://public.tableau.com/shared/4NHP76KDY?:display_count=n&:origin=viz_share_link ';
   const precipitationAndTempChangesbyState = 'https://public.tableau.com/views/BetterMaps_17324144202350/ScatterPlotbyChanges?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
 
+  const testLink = 'https://public.tableau.com/views/Group_Project_17330019467830/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
+
+  let scale = 1;
+  let offsetX = 0; 
+  let distanceX = 0;
+
+  window.onload = function() {
+    document.body.style.overflowY = 'hidden';
+  }
+
+  window.addEventListener('wheel', function(e) {
+      const earth = document.querySelector('.earth');
+      const blueCover = document.querySelector('.blueCover');
+      const maxSize = 8; 
+
+      const scaleIncrement = e.deltaY > 0 ? 0.05 : -0.05;
+      scale += scaleIncrement;
+      
+      if (scale < 1)
+      {
+          scale = 1;
+      }
+
+      if (scale > maxSize)
+      {
+          scale = maxSize;
+      }
+
+      if (scale > 6)
+      {
+        blueCover.style.display = 'flex';
+          if (blueCover.style.opacity < 1)
+          {
+              earth.style.opacity = 1 - (scale - 6) / 2; 
+              earth.style.display = 'block';
+          }
+          else
+          {
+              earth.style.opacity = 0;
+              earth.style.display = 'none';
+          }
+          blueCover.style.opacity = 0.8 + (scale - 6) / 2;
+      }
+      else
+      {
+          blueCover.style.opacity = 0;
+          blueCover.style.display = 'none';
+          earth.style.display = 'block';
+      }
+    
+      
+      offsetX = e.deltaY; 
+      distanceX += offsetX;
+
+      if (distanceX > 50)
+      {
+          distanceX = 50;
+      }
+
+      if (distanceX < 0)
+      {
+          distanceX = 0;
+      }
+
+      earth.style.transform = `scale(${scale})`;
+      earth.style.right = `${distanceX}%`;
+
+
+      if (blueCover.style.opacity >= 1) 
+      {
+          document.body.style.overflowY = '';
+      } 
+      else if (e.deltaY < 0) 
+      {
+          document.body.style.overflowY = '';
+      }
+      else
+      {
+          document.body.style.overflowY = 'hidden';
+      }
+  });
 
   return (
     <div className="App">
+      <div className="blueCover" id="blueCover">
+        <div className="textYearlyTempAnomolies">
+            The following graph shows the magnitude of the anomaly for each year compared to the baseline years of 1951-1980. For example, in 1947 the anomaly was .460 which means that 1947 was .46 degrees Celsius warmer than in 1951-1980. As can be seen, nearly every year before 1951 was cooler than the baseline of 1951-1980 (with the exception of 1940-1945 which was during World War 2 leading to a change and inconsistency of measurement) and every year after 1980 was warmer than the baseline. In fact, 2023 had an anomaly of 1.170. According to Mapfre, a single degree change can lead to rising sea levels, loss of arctic ice, extreme heat waves, and force changes in agricultural practices (due to temperatures changing in agricultural regions). A continuing increase of temperature could lead to rapid changes in participation, temperature, and extreme weather events.
+        </div>
+        <div className="yearlyTempAnomolies">
+          <div className="toolbarCover"></div>
+          <TableauEmbed url={testLink}/> 
+          {/* <TableauEmbed url={yearlyTempAnomolies}/>  */}
+        </div>
+      </div>
+      <div className="titleBox">
+        <div className="title">
+            Climate in Motion
+        </div>
+        <div className="spinningEarth">
+            <img id="earth" className="earth" src={Earth} alt="Spinning Earth"/>
+        </div>
+      </div>
       <p>The effects of climate change can take on a variety forms: rising temperature, changing precipitation patterns, more extreme weather like floods and storms. One way to understand the impact of these effects is to look at the percentage of population or land exposed.</p>
       <TableauEmbed url={sumOfExposureValues}/>
       <br/>
