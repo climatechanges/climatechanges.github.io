@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import TableauEmbed from './TableauEmbed';
+import VegaVisualization from './SanddanceEmbed';
 
 function App() {
   const sumOfExposureValues = 'https://public.tableau.com/views/SumExposureMap/Dashboard12?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
