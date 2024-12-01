@@ -19,6 +19,16 @@ body
     height: 100vh;
 }
 
+p
+{
+  font-family: 'Poppins', sans-serif;
+}
+
+bold
+{
+  font-weight: bold;
+}
+
 .title
 {
     font-size: 60pt;
@@ -63,16 +73,18 @@ body
 {
     color: white;
     font-family: 'Poppins', sans-serif;
-    width: 50%;
-    margin-right: 10%;
+    width: 35%;
+    margin-right: 5%;
     margin-left: 5%;
     font-size: 16pt;
+    line-height: 1.75em;
 }
 
 .yearlyTempAnomolies
 {
-    width: 50%;
+    width: 65%;
     margin-right: 0%;
+    height: 100%;
 }
 
 .toolbarCover
@@ -81,7 +93,7 @@ body
   height: 10vh;
   background-color: #1894bc;
   position: relative;
-  top: 78vh;
+  top: calc(50% + 225px);
 }
 
 .next
