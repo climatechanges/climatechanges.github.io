@@ -14,7 +14,8 @@ function App() {
   const exposureValues2022 = 'https://public.tableau.com/views/ExposureValues2022/ExposureValues?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
   // const yearlyTempAnomoliesOG = 'https://public.tableau.com/views/BasicTemperatureVis/AreaChart?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
   const yearlyTempAnomolies = 'https://public.tableau.com/views/yearlyTempAnomolies/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
-  const monthlyTempAnomolies = 'https://public.tableau.com/views/UniqueTemperatureVis/Heatmap?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
+  // const monthlyTempAnomoliesOG = 'https://public.tableau.com/views/UniqueTemperatureVis/Heatmap?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
+  const monthlyTempAnomolies = 'https://public.tableau.com/views/UniqueTemperatureVis_17330212511100/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
   const magnitudeOfTempAnomoliesByMonth = 'https://public.tableau.com/views/UniqueTemperatureVis/RadialChart?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link ';
   const nationalAndStateRiskLevel = 'https://public.tableau.com/shared/4NHP76KDY?:display_count=n&:origin=viz_share_link ';
   const precipitationAndTempChangesbyState = 'https://public.tableau.com/views/BetterMaps_17324144202350/ScatterPlotbyChanges?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
@@ -125,9 +126,7 @@ function App() {
             to rapid changes in participation, temperature, and extreme weather events. */}
         </div>
         <div className="yearlyTempAnomolies">
-          <div className="toolbarCover"></div>
           <TableauEmbed url={yearlyTempAnomolies}/> 
-          {/* <TableauEmbed url={yearlyTempAnomolies}/>  */}
         </div>
       </div>
       <div className="titleBox">

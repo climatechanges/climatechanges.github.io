@@ -85,6 +85,9 @@ bold
     width: 65%;
     margin-right: 0%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .toolbarCover
@@ -103,4 +106,25 @@ bold
     height: 40vh;
     position: relative;
     z-index: 99;
+}
+
+.monthlyTempAnomolies
+{
+  width: 100%;
+  height: 90vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.monthlyTempAnomolies .tableauEmbed
+{
+  display: flex;
+  justify-content: center;
+}
+
+.monthlyTempAnomolies p
+{
+  font-size: 16pt;
 }
