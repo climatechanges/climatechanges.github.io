@@ -1,14 +1,14 @@
 import './App.css';
-import React from 'react';
-import TableauEmbed from './TableauEmbed';
-import VegaVisualization from './SanddanceEmbed';
+import React, { useState, lazy, Suspense } from 'react';
 import { forestWildfiresSpec, populationWildfiresSpec, 
   populationViolentStormsSpec, populationIcingDaysSpec, 
   populationHotDaysSpec, landViolentStormsSpec, 
   landRiverFloodingSpec, landExtremePrecipitationSpec,
   landCoastalFloodingSpec} from './sanddanceSpecs.js'
 import Earth from './globe_spinning.gif';
-import { useState } from 'react';
+
+const TableauEmbed = lazy(() => import('./TableauEmbed'));
+const VegaVisualization = lazy(() => import('./SanddanceEmbed'));
 
 function App() {
   // const sumOfExposureValuesOG = 'https://public.tableau.com/views/SumExposureMap/Dashboard12?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
@@ -149,7 +149,9 @@ function App() {
             to rapid changes in participation, temperature, and extreme weather events. */}
         </div>
         <div className="yearlyTempAnomolies">
-          <TableauEmbed url={yearlyTempAnomolies}/> 
+          <Suspense fallback={<div>Loading...</div>}>
+            <TableauEmbed url={yearlyTempAnomolies}/> 
+          </Suspense>
         </div>
       </div>
       <div className="titleBox">
@@ -165,7 +167,9 @@ function App() {
           This graph shows the same data while adding information about the months. As is seen, the anomaly has continued to increase from the baseline.
         </div>
         <div className="monthlyTempAnomoliesMagnitudes">
-          <TableauEmbed url={monthlyTempAnomoliesMagnitudes}/>
+          <Suspense fallback={<div>Loading...</div>}>
+            <TableauEmbed url={monthlyTempAnomoliesMagnitudes}/>
+          </Suspense>
         </div>
       </div>
       <div className="exposureSums">
@@ -183,7 +187,9 @@ function App() {
           Click on a country to see the exposure value breakdown at a country level
         </div>
         <div className="sumOfExposureValues">
-          <TableauEmbed url={sumOfExposureValues}/>
+          <Suspense fallback={<div>Loading...</div>}>
+            <TableauEmbed url={sumOfExposureValues}/>
+          </Suspense>
         </div>
         <div className="summaryExposureValues">
           Only one country had no exposure to any of the measured events in 2022: Tokelau.
@@ -199,7 +205,9 @@ function App() {
         </div>
         <div className="exposureGraphWrapper">
           <div className="exposureValuesGraph">
-            <VegaVisualization spec={currentSpec} />
+            <Suspense fallback={<div>Loading...</div>}>
+              <VegaVisualization spec={currentSpec} />
+            </Suspense>
             <div className="explain">
               Each square above is a country with its color representing the percentage of its land exposed.
             </div>
@@ -218,16 +226,21 @@ function App() {
         </div>
       </div>
       <br/>
-
-      <TableauEmbed url={exposureValues2022}/>
+      <Suspense fallback={<div>Loading...</div>}>
+        <TableauEmbed url={exposureValues2022}/>
+      </Suspense>
       <br/>
 
       <p>The following map shows the anticipated climate risk level for each county in 2040-2049. The risk is made up of the amount of hazard, exposure, and vulnerability in each county. Click on a county to learn more about their specific risk as well as state-wide risk.</p>
-      <TableauEmbed url={nationalAndStateRiskLevel}/>
+      <Suspense fallback={<div>Loading...</div>}>
+        <TableauEmbed url={nationalAndStateRiskLevel}/>
+      </Suspense>
       <br/>
 
       <p>This scatter plot shows anticipated temperature and precipitation changes in 2040-2049 for each state. Click on an item to learn more about state-risks.</p>
-      <TableauEmbed url={precipitationAndTempChangesbyState}/>
+      <Suspense fallback={<div>Loading...</div>}>
+        <TableauEmbed url={precipitationAndTempChangesbyState}/>
+      </Suspense>
       <br/>
       <br/>
       <p>WOAH Guy's super cool oxygen stuff is going to go here</p>
