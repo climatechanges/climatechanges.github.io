@@ -8,15 +8,18 @@ import { forestWildfiresSpec, populationWildfiresSpec,
   landRiverFloodingSpec, landExtremePrecipitationSpec,
   landCoastalFloodingSpec} from './sanddanceSpecs.js'
 import Earth from './globe_spinning.gif';
+import { useState } from 'react';
 
 function App() {
-  const sumOfExposureValues = 'https://public.tableau.com/views/SumExposureMap/Dashboard12?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
+  // const sumOfExposureValuesOG = 'https://public.tableau.com/views/SumExposureMap/Dashboard12?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
+  const sumOfExposureValues = 'https://public.tableau.com/views/SumExposureMap_17330841124910/Dashboard13?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
   const exposureValues2022 = 'https://public.tableau.com/views/ExposureValues2022/ExposureValues?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
   // const yearlyTempAnomoliesOG = 'https://public.tableau.com/views/BasicTemperatureVis/AreaChart?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
   const yearlyTempAnomolies = 'https://public.tableau.com/views/yearlyTempAnomolies/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
   // const monthlyTempAnomoliesOG = 'https://public.tableau.com/views/UniqueTemperatureVis/Heatmap?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
   const monthlyTempAnomolies = 'https://public.tableau.com/views/UniqueTemperatureVis_17330212511100/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
-  const magnitudeOfTempAnomoliesByMonth = 'https://public.tableau.com/views/UniqueTemperatureVis/RadialChart?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link ';
+  // const magnitudeOfTempAnomoliesByMonthOG = 'https://public.tableau.com/views/UniqueTemperatureVis/RadialChart?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link ';
+  const monthlyTempAnomoliesMagnitudes = 'https://public.tableau.com/views/UniqueTemperatureVis_17330212511100/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
   const nationalAndStateRiskLevel = 'https://public.tableau.com/shared/4NHP76KDY?:display_count=n&:origin=viz_share_link ';
   const precipitationAndTempChangesbyState = 'https://public.tableau.com/views/BetterMaps_17324144202350/ScatterPlotbyChanges?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
 
@@ -107,6 +110,26 @@ function App() {
       }
   });
 
+  const [currentSpec, setCurrentSpec] = useState(forestWildfiresSpec);
+
+  const [exposureExplanation, setExposureExplanation] = useState("Percentage of forested areas at risk of burning.");
+  const specExplanations = {
+    forestWildfiresSpec : "Percentage of forested areas at risk of burning.",
+    populationWildfiresSpec : "Percentage of population located in areas at risk of burning.",
+    populationViolentStormsSpec : "Percentage of population exposed to wind gust speeds greater than 28.6 m/s.",
+    populationIcingDaysSpec : "Percentage of population exposed to days with a maximum temperature less than 0°C.",
+    populationHotDaysSpec : "Percentage of population exposed to days with a maximum temperature greater than 35°C.",
+    landViolentStormsSpec : "Percentage of population exposed to wind gust speeds greater than 28.6 m/s.",
+    landRiverFloodingSpec : "Percentage of land area to river flooding at a 10 year return period.",
+    landExtremePrecipitationSpec : "Land exposed to 2+ weeks of days exceeding the 99th percentile of daily precipitation values over the reference period (1981-2010).",
+    landCoastalFloodingSpec : "Percentage of land area to coastal flooding at a 10 year return period."
+  };
+
+  const changeSpec = (spec, specName) => {
+    setCurrentSpec(spec);
+    setExposureExplanation(specExplanations[specName]);
+  };
+
   return (
     <div className="App">
       <div className="blueCover" id="blueCover">
@@ -138,34 +161,65 @@ function App() {
         </div>
       </div>
       <div className="monthlyTempAnomolies">
-        <p>This graph shows the same data while adding information about the months. As is seen, the anomaly has continued to increase from the baseline.</p>
-        <TableauEmbed url={monthlyTempAnomolies}/>
+        <div className="textMonthlyTempAnomoliesMagnitudes">
+          This graph shows the same data while adding information about the months. As is seen, the anomaly has continued to increase from the baseline.
+        </div>
+        <div className="monthlyTempAnomoliesMagnitudes">
+          <TableauEmbed url={monthlyTempAnomoliesMagnitudes}/>
+        </div>
       </div>
-      <p>The effects of climate change can take on a variety forms: rising temperature, changing precipitation patterns, more extreme weather like floods and storms. One way to understand the impact of these effects is to look at the percentage of population or land exposed.</p>
-      <TableauEmbed url={sumOfExposureValues}/>
+      <div className="exposureSums">
+        <div className="cautionTape">.</div>
+        <div className="text">
+          <div className="caution">
+            CAUTION
+          </div>
+          <div className="textSumOfExposureValues">
+            The effects of climate change can take on a variety forms: rising temperature, changing precipitation patterns, more extreme weather like floods 
+            and storms. One way to understand the impact of these effects is to look at the percentage of population or land exposed.
+          </div>
+        </div>
+        <div className="instructions">
+          Click on a country to see the exposure value breakdown at a country level
+        </div>
+        <div className="sumOfExposureValues">
+          <TableauEmbed url={sumOfExposureValues}/>
+        </div>
+        <div className="summaryExposureValues">
+          Only one country had no exposure to any of the measured events in 2022: Tokelau.
+          On average, nations experienced 4.5 out of 9 of the measured events, revealing the vast and relentless reach of this crisis. 
+          This stark reality shows that no nation, no matter its size or location, is untouched by our changing world. 
+          The biggest concerns may differ from region to region, but one thing is clear: climate change is a global emergency, and the danger is everywhere.
+        </div>
+        <div className="cautionTape">.</div>
+      </div>
+      <div className="exposureValues">
+        <div className="exposureExplanation">
+          {exposureExplanation}
+        </div>
+        <div className="exposureGraphWrapper">
+          <div className="exposureValuesGraph">
+            <VegaVisualization spec={currentSpec} />
+            <div className="explain">
+              Each square above is a country with its color representing the percentage of its land exposed.
+            </div>
+          </div>
+          <div className="exposureValuesButtons">
+            <button onClick={() => changeSpec(forestWildfiresSpec, "forestWildfiresSpec")} className={`${currentSpec === forestWildfiresSpec ? "selected" : "unselected"}`}>Forest Exposure to Wildfires</button>
+            <button onClick={() => changeSpec(populationWildfiresSpec, "populationWildfiresSpec")} className={`${currentSpec === populationWildfiresSpec ? "selected" : "unselected"}`}>Population Exposure to Wildfires</button>
+            <button onClick={() => changeSpec(populationHotDaysSpec, "populationHotDaysSpec")} className={`${currentSpec === populationHotDaysSpec ? "selected" : "unselected"}`}>Population Exposure to Hot Days</button>
+            <button onClick={() => changeSpec(populationIcingDaysSpec, "populationIcingDaysSpec")} className={`${currentSpec === populationIcingDaysSpec ? "selected" : "unselected"}`}>Population Exposure to Icing Days</button>
+            <button onClick={() => changeSpec(landViolentStormsSpec, "landViolentStormsSpec")} className={`${currentSpec === landViolentStormsSpec ? "selected" : "unselected"}`}>Land Exposure to Violent Storms</button>
+            <button onClick={() => changeSpec(populationViolentStormsSpec, "populationViolentStormsSpec")} className={`${currentSpec === populationViolentStormsSpec ? "selected" : "unselected"}`}>Population Exposure to Violent Storms</button>
+            <button onClick={() => changeSpec(landExtremePrecipitationSpec, "landExtremePrecipitationSpec")} className={`${currentSpec === landExtremePrecipitationSpec ? "selected" : "unselected"}`}>Land Exposure to Extreme Precipitation</button>
+            <button onClick={() => changeSpec(landRiverFloodingSpec, "landRiverFloodingSpec")} className={`${currentSpec === landRiverFloodingSpec ? "selected" : "unselected"}`}>Land Exposure to River Flooding</button>
+            <button onClick={() => changeSpec(landCoastalFloodingSpec, "landCoastalFloodingSpec")} className={`${currentSpec === landCoastalFloodingSpec ? "selected" : "unselected"}`}>Land Exposure to Coastal Flooding</button>
+          </div>
+        </div>
+      </div>
       <br/>
 
-      <p>Only one country had no exposure to any of the measured events in 2022:  Tokelau.
-On average, nations experienced 4.5 out of 9 of the measured events, revealing the vast and relentless reach of this crisis. 
-
-This stark reality shows that no nation, no matter its size or location, is untouched by our changing world. The biggest concerns may differ from region to region, but one thing is clear: climate change is a global emergency, and the danger is everywhere.
-
-Click on the + under Continent to see the measures at a country level. (maybe we could put this next to where they should click)
-</p>
       <TableauEmbed url={exposureValues2022}/>
-      <br/>
-
-      <p>The following graph shows the magnitude of the anomaly for each year compared to the baseline years of 1951-1980. For example, in 1947 the anomaly was .460 which means that 1947 was .46 degrees Celsius warmer than in 1951-1980. As can be seen, nearly every year before 1951 was cooler than the baseline of 1951-1980 (with the exception of 1940-1945 which was during World War 2 leading to a change and inconsistency of measurement) and every year after 1980 was warmer than the baseline. In fact, 2023 had an anomaly of 1.170. According to Mapfre, a single degree change can lead to rising sea levels, loss of arctic ice, extreme heat waves, and force changes in agricultural practices (due to temperatures changing in agricultural regions). A continuing increase of temperature could lead to rapid changes in participation, temperature, and extreme weather events. 
-      </p>
-      <TableauEmbed url={yearlyTempAnomolies}/>
-      <br/>
-
-      <p>This graph shows the same data while adding information about the months. As is seen, the anomaly has continued to increase from the baseline.</p>
-      <TableauEmbed url={monthlyTempAnomolies}/>
-      <br/>
-
-      <p>The following chart illustrates the magnitude of the anomaly per month. The color code here is the years with lighter colors being earlier years and darker colors being later years. Not only are the more recent years showing a greater anomaly (farther from the center of the chart), they are getting increasingly spaced out (the outer spokes have larger distances than earlier years). This shows that not only is temperature increasing, but it is increasing at a faster rate than earlier years.</p>
-      <TableauEmbed url={magnitudeOfTempAnomoliesByMonth}/>
       <br/>
 
       <p>The following map shows the anticipated climate risk level for each county in 2040-2049. The risk is made up of the amount of hazard, exposure, and vulnerability in each county. Click on a county to learn more about their specific risk as well as state-wide risk.</p>
@@ -179,7 +233,7 @@ Click on the + under Continent to see the measures at a country level. (maybe we
       <p>WOAH Guy's super cool oxygen stuff is going to go here</p>
       <p>Maybe some really cool rain graphs might go here, idk</p>
       
-      <p>Forest Exposure to Wildfires</p>
+      {/* <p>Forest Exposure to Wildfires</p>
       <p>Percentage of forested areas at risk of burning.</p>
       <p>In the following, each square is a country with its color representing the percentage of its forest exposed.</p>
       <VegaVisualization spec={forestWildfiresSpec} />
@@ -222,7 +276,7 @@ Click on the + under Continent to see the measures at a country level. (maybe we
       <p>Land Exposure to Coastal Flooding</p>
       <p>Percentage of land area to coastal flooding at a 10 year return period.</p>
       <p>In the following, each square is a country with its color representing the percentage of its land exposed.</p>
-      <VegaVisualization spec={landCoastalFloodingSpec} />
+      <VegaVisualization spec={landCoastalFloodingSpec} /> */}
     </div>
     
   );

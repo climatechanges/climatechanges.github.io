@@ -17,6 +17,8 @@ body
     justify-content: center;
     width: 100%;
     height: 100vh;
+    background-color: #fffcf3;
+    /* background-color: #F5F5F4; */
 }
 
 p
@@ -51,11 +53,13 @@ bold
     width: 100vh;
     position: relative;
     background-size: 100% 100%;
+    filter: brightness(1.14);
 }
 
 .blueCover
 {
-    background-color: #1894bc;
+    background-image: url('./waterBG.png');
+    background-size: cover;
     opacity: 0;
     width: 100vw;
     height: 100vh;
@@ -65,7 +69,6 @@ bold
     overflow-x: hidden;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
 }
 
@@ -73,21 +76,31 @@ bold
 {
     color: white;
     font-family: 'Poppins', sans-serif;
-    width: 35%;
-    margin-right: 5%;
-    margin-left: 5%;
+    width: 30%;
+    margin-left: 3%;
     font-size: 16pt;
-    line-height: 1.75em;
+    line-height: 2em;
+    text-align: left;
+    margin-right: 2%;
 }
 
 .yearlyTempAnomolies
 {
-    width: 65%;
+    width: 50%;
     margin-right: 0%;
+    margin-left: 18%;
+    margin-right: 2%;
     height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+.yearlyTempAnomolies .tableauEmbed
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .toolbarCover
@@ -111,20 +124,191 @@ bold
 .monthlyTempAnomolies
 {
   width: 100%;
-  height: 90vh;
+  height: 120vh;
   align-items: center;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background-color: #fffcf3;
 }
 
-.monthlyTempAnomolies .tableauEmbed
+.textMonthlyTempAnomoliesMagnitudes
+{
+  font-size: 16pt;
+  margin-top: -10%;
+  margin-bottom: 2%;
+}
+
+.monthlyTempAnomoliesMagnitudes
+{
+  width: 100vw !important;
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 5%;
+}
+
+.exposureSums
 {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 150vh;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.caution
+{
+  color: white;
+  background-color: #C80A00;
+  width: 22vw;
+  height: 16vh;
+  font-size: 12vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-left: 5%;
+}
+
+.sumOfExposureValues
+{
+  width: 1600px !important;
+  height: 700px !important;
+}
+
+.exposureSums .text
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  margin-top: 3%;
+}
+
+.textSumOfExposureValues
+{
+  font-family: 'Poppins', sans-serif;
+  font-size: 16pt;
+  margin-left: 2%;
+  text-align: left;
+}
+
+.exposureSums .instructions
+{
+  font-size: 14pt;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 2%;
+}
+
+.summaryExposureValues
+{
+  font-size: 16pt;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 10%;
+  margin-bottom: 2%;
+  width: 90%;
+}
+
+.cautionTape
+{
+  background-image: url('./cautionTape.png');
+  background-size: cover;
+  color: transparent;
+  width: 100vw;
+  height: 5vh;
+}
+
+.exposureValues 
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fffcf3;
+  width: 100vw;
+  height: 120vh;
+}
+
+.exposureValuesGraph
+{
+  height: 100%;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+}
+
+.exposureValuesButtons
+{
+  height: 100%;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
-.monthlyTempAnomolies p
+.exposureValuesButtons button
+{
+  width: 80%;
+  font-size: 18pt;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 5%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.exposureValuesButtons button:hover
+{
+  color: green;
+}
+
+.exposureValuesButtons button.selected
+{
+  color: green;
+}
+
+.exposureValuesButtons button.unselected
+{
+  opacity: 0.5;
+}
+
+.exposureValuesGraph .explain
+{
+  font-size: 14pt;
+  font-family: 'Poppins', sans-serif;
+  margin-top: -2%;
+}
+
+.exposureGraphWrapper
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.exposureExplanation
 {
   font-size: 16pt;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  overflow: wrap;
+  margin-bottom: -2%;
+  font-weight: bold;
 }
