@@ -176,7 +176,8 @@ function App() {
           </div>
           <div className="textSumOfExposureValues">
             The effects of climate change can take on a variety forms: rising temperature, changing precipitation patterns, more extreme weather like floods 
-            and storms. One way to understand the impact of these effects is to look at the percentage of population or land exposed.
+            and storms. One way to understand the impact of these effects is to look at the percentage of population or land exposed. Only one country had
+            no exposure to any of the measured events in 2022: Tokelau.
           </div>
         </div>
         <div className="instructions">
@@ -184,12 +185,6 @@ function App() {
         </div>
         <div className="sumOfExposureValues">
           <TableauEmbed url={sumOfExposureValues}/>
-        </div>
-        <div className="summaryExposureValues">
-          Only one country had no exposure to any of the measured events in 2022: Tokelau.
-          On average, nations experienced 4.5 out of 9 of the measured events, revealing the vast and relentless reach of this crisis. 
-          This stark reality shows that no nation, no matter its size or location, is untouched by our changing world. 
-          The biggest concerns may differ from region to region, but one thing is clear: climate change is a global emergency, and the danger is everywhere.
         </div>
         <div className="cautionTape">.</div>
       </div>
@@ -217,10 +212,17 @@ function App() {
           </div>
         </div>
       </div>
+      <div className="summaryExposureValues">
+          On average, nations experienced 4.5 out of 9 of the measured events, revealing the vast and relentless reach of this crisis. 
+      </div>
       <br/>
 
       <TableauEmbed url={exposureValues2022}/>
       <br/>
+      <div className="summaryExposureValues">
+          This stark reality shows that no nation, no matter its size or location, is untouched by our changing world. 
+          The biggest concerns may differ from region to region, but one thing is clear: climate change is a global emergency, and the danger is everywhere.
+      </div>
 
       <p>The following map shows the anticipated climate risk level for each county in 2040-2049. The risk is made up of the amount of hazard, exposure, and vulnerability in each county. Click on a county to learn more about their specific risk as well as state-wide risk.</p>
       <TableauEmbed url={nationalAndStateRiskLevel}/>
