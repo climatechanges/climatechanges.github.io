@@ -11,7 +11,7 @@ const TableauEmbed = ({ url }) => {
     };
   }, [url]);
 
-  return <div className="tableauEmbed" ref={ref} style={{ width: '100%', height: '600px' }}></div>;
+  return <div className="tableauEmbed" ref={ref}></div>;
 };
 
 export default TableauEmbed;

@@ -1,0 +1,62 @@
+import React, { useState, useEffect } from "react";
+
+const DeltaO = () => {
+    const [currentSection, setCurrentSection] = useState(0);
+
+    const sections = [
+      {
+        text: "This map shows δ¹⁸O values calculated from a collection of over 26,000 seawater ¹⁸O values prepared by NASA. Overall, the values mostly sit around or above 0, indicating a normal, expected ratio of 18O and 16O. However, there is a noticeable patch of very low δ¹⁸O values off the Northern coast of russia, a highly frozen glacial sea region.",
+        image: "./deltaO1.png"
+      },
+      {
+        text: "This trend of low negative Delta-O-18 values is further seen if we create longitude and latitude bins, and look at the average Delta-O-18 values in the resulting grid.",
+        image: "./deltaO2.png"
+      },
+      {
+        text: "We can also look at Delta-O-18 values by depth. The following visualization shows Delta-O-18 again binned by longitude, and organized by depth. Notice that the negative Delta-O-18 values are concentrated near the surface (depth equals zero).",
+        image: "./deltaO3.png"
+      },
+      {
+        text: "We can also swap Longitude for Temperature, and look at average Delta-O-18 divided into Temperature and Depth regions. Looking at this breakdown, it is clear that the negative Delta-O-18 regions are mainly located near the surface in colder regions.",
+        image:"./deltaO4.png"
+      },
+      {
+        text: "This suggests that in a very recent period, glacial ice has been melting at an increased rate than normal.",
+        image:"./deltaO5.png"
+      }
+    ];
+
+    useEffect(() => {
+        const handleScroll = () => {
+          const scrollPos = window.scrollY;
+          const section = Math.floor(scrollPos / window.innerHeight);
+          setCurrentSection(section);
+        };
+    
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, []);
+    
+      return (
+        <div className="deltaO">
+          <div className="deltaOWrapper">
+            <div className="deltaOText">
+              {sections[currentSection]?.text || "Scroll down to see more"}
+            </div>
+            <div className="deltaOVizFormat">
+              <div
+                className="deltaOViz"
+                style={{
+                  backgroundImage: `url(${sections[currentSection]?.image || "default.png"})`,
+                  backgroundSize: "cover",
+                  height: "300px",
+                  width: "100%",
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      );
+    };
+    
+    export default DeltaO;

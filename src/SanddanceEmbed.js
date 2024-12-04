@@ -6,7 +6,7 @@ const VegaVisualization = ({ spec }) => {
 
   useEffect(() => {
     if (spec) {
-      vegaEmbed(vegaContainerRef.current, spec)
+      vegaEmbed(vegaContainerRef.current, spec, { actions: false, width: '100%', height: '100%' })
         .then(result => {
           console.log('Vega embed result:', result);
         })
