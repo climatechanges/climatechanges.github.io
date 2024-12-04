@@ -31,7 +31,8 @@ function App() {
   const monthlyTempAnomoliesMagnitudes = 'https://public.tableau.com/views/UniqueTemperatureVis_17330212511100/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
   // const monthlyTempAnomoliesMagnitudes = 'https://public.tableau.com/views/UniqueTemperatureVis_17330212511100/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
   const nationalAndStateRiskLevelOG = 'https://public.tableau.com/shared/4NHP76KDY?:display_count=n&:origin=viz_share_link ';
-  const nationalAndStateRiskLevel = 'https://public.tableau.com/views/BetterMaps_17333238426540/Dashboard5?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
+  //const nationalAndStateRiskLevel = 'https://public.tableau.com/views/BetterMaps_17333238426540/Dashboard5?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
+  const nationalAndStateRiskLevel = 'https://public.tableau.com/views/BetterMaps_17324144202350/Dashboard5?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link'
   const precipitationAndTempChangesbyState = 'https://public.tableau.com/views/BetterMaps_17324144202350/ScatterPlotbyChanges?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
   const medianAnnualPrecipitationChange = 'https://public.tableau.com/views/Group_Project_17330019467830/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
   const mediaCroplandExposure = 'https://public.tableau.com/views/Group_Project_17330019467830/Sheet5?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
@@ -232,9 +233,9 @@ function App() {
       </div>
       <div className="monthlyTempAnomolies">
         <div className="textMonthlyTempAnomoliesMagnitudes">
-          This graph shows the same data while adding information about the months. As is seen, the anomaly has continued to increase from the baseline.
-          And here is some more explantions about the data and how to interact with the graph. Yes this is a really nice graph. There's so many cool things
-          that it can tell you if you just keep reading. Yes we have lots to say about these two visualizations.
+          These graphs shows the change in temperature including month data. The graph on the left illustrates the increasing anomoly. On the right,
+          the farther away from the center the larger anomoly. As can be seen, recent years have greater anomolies and are less clustered. This suggests
+          a more rapid rate of change.
         </div>
         <div className="bgMonthlyTempAnomoliesMagnitudes" />
         <div className="accentMonthlyTempAnomoliesMagnitudes" />
