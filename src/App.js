@@ -188,7 +188,7 @@ function App() {
     populationViolentStormsSpec : "Percentage of population exposed to wind gust speeds greater than 28.6 m/s.",
     populationIcingDaysSpec : "Percentage of population exposed to days with a maximum temperature less than 0°C.",
     populationHotDaysSpec : "Percentage of population exposed to days with a maximum temperature greater than 35°C.",
-    landViolentStormsSpec : "Percentage of population exposed to wind gust speeds greater than 28.6 m/s.",
+    landViolentStormsSpec : "Percentage of land exposed to wind gust speeds greater than 28.6 m/s.",
     landRiverFloodingSpec : "Percentage of land area to river flooding at a 10 year return period.",
     landExtremePrecipitationSpec : "Land exposed to 2+ weeks of days exceeding the 99th percentile of daily precipitation values over the reference period (1981-2010).",
     landCoastalFloodingSpec : "Percentage of land area to coastal flooding at a 10 year return period."
@@ -244,8 +244,8 @@ function App() {
       </div>
       <div className="exposureIntro">
         <div className="text">
-          I am introducing what exposure is? What can it cause? What are the effects of exposure? What are the different types of exposure? Why should I care?
-          Does it change depending on where I live? Please explain more to me omg please please please please
+        The effects of climate change can take on a variety forms: rising temperature, changing precipitation patterns, more extreme weather like floods 
+        and storms. One way to understand the impact of these effects is to look at the percentage of population or land exposed. 
         </div>
         <div className="shadow" />
         <div className="bg" />
@@ -254,9 +254,8 @@ function App() {
           <div className="exposureTextTotal">
             <div className="exposureTextBlock">
               <div className="textSumOfExposureValues">
-                The effects of climate change can take on a variety forms: rising temperature, changing precipitation patterns, more extreme weather like floods 
-                and storms. One way to understand the impact of these effects is to look at the percentage of population or land exposed. 
-                Only one country had no exposure to any of the measured events in 2022: Tokelau.
+              The Organization for Economic Cooperation and Development (OECD) monitors the exposure to various climate-related hazards in recent years for areas
+              word wide. Only one country had no exposure to any of the measured events in 2022: Tokelau.
               </div>
             </div>
             <div className="exposureAccent"/>
@@ -274,18 +273,22 @@ function App() {
         <div className="sumOfExposureValues">
           <TableauEmbed url={sumOfExposureValues}/>
         </div>
-        <div className="summaryBlock">
-          <div className="summaryExposureValues">
-            On average, nations experienced 4.5 out of 9 of the measured events, revealing the vast and relentless reach of this crisis. 
-            This stark reality shows that no nation, no matter its size or location, is untouched by our changing world. 
-            The biggest concerns may differ from region to region, but one thing is clear: climate change is a global emergency, and the danger is everywhere.
-          </div>
-        </div>
-        <div className="summaryAccent" />
         <div className="sandDances">
+          <div className="summaryBlock">
+            <div className="summaryExposureValues">
+              In the following, each square is a country with its color representing the exposure value for a specific year.
+            </div>
+          </div>
+          <div className="summaryAccent" />
           <div className="instructions">
-            <span class="material-symbols-outlined">info</span>
-              Hover over a square to view the country's name and exposure value
+            <div>
+              <span class="material-symbols-outlined">info</span>
+                Hover over a square to view the country's name and exposure value
+            </div>
+            <div>
+              <span class="material-symbols-outlined">info</span>
+                Click on a measure to the right to see its data
+            </div>
           </div>
           <div className="exposureGraphWrapper">
             <div className="exposureGraphExplain">
@@ -308,6 +311,27 @@ function App() {
               <button onClick={() => changeSpec(landCoastalFloodingSpec, "landCoastalFloodingSpec")} className={`${currentSpec === landCoastalFloodingSpec ? "selected" : "unselected"}`}>Land Exposure to Coastal Flooding</button>
             </div>
           </div>
+        </div>
+        <div className="exposureTextBlock">
+          <div className="textSumOfExposureValues">
+            On average, nations experienced 4.5 out of 9 of the measured events in 2022, revealing the vast and relentless reach of this crisis. 
+            This stark reality shows that no nation, no matter its size or location, is untouched by our changing world. 
+            The biggest concerns may differ from region to region, but one thing is clear: climate change is a global emergency, and the danger is everywhere.
+          </div>
+        </div>
+        <div className="exposureAccent" />
+        <div className="instructions">
+          <div>
+            <span class="material-symbols-outlined">info</span>
+            Hover over a block to see the area's name and exposure value
+          </div>
+          <div>
+            <span class="material-symbols-outlined">info</span>
+            Click on the [+] under Continent to see the data at a country level 
+          </div>
+        </div>
+        <div className="sumOfExposureValues">
+          <TableauEmbed url={exposureValues2022}></TableauEmbed>
         </div>
       </div>
       <div className="precipEffects">
