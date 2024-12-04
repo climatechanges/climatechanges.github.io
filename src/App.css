@@ -294,7 +294,7 @@ bold
 .exposureSums
 {
   width: 100vw;
-  height: 265vh;
+  height: 360vh;
 }
 
 .sumOfExposureValues
@@ -393,7 +393,7 @@ bold
 {
   margin-top: 0vh;
   width: 100vw;
-  height: 100vh;
+  height: 125vh;
 }
 
 .exposureValuesGraph
