@@ -244,8 +244,8 @@ function App() {
       </div>
       <div className="exposureIntro">
         <div className="text">
-        The effects of climate change can take on a variety forms: rising temperature, changing precipitation patterns, more extreme weather like floods 
-        and storms. One way to understand the impact of these effects is to look at the percentage of population or land exposed. 
+          The effects of climate change can take on a variety forms: rising temperature, changing precipitation patterns, more extreme weather like floods 
+          and storms. One way to understand the impact of these effects is to look at the percentage of population or land exposed. 
         </div>
         <div className="shadow" />
         <div className="bg" />
@@ -262,12 +262,10 @@ function App() {
           </div>
         <div className="instructions">
           <div>
-            <span class="material-symbols-outlined">info</span>
-            Hover over a country to see its name and sum exposure value
+            ⓘ Hover over a country to see its name and sum exposure value
           </div>
           <div>
-            <span class="material-symbols-outlined">info</span>
-            Click on a country to see the exposure value breakdown at a country level (ctrl + click to select multiple)
+            ⓘ Click on a country to see the exposure value breakdown at a country level (ctrl + click to select multiple)
           </div>
         </div>
         <div className="sumOfExposureValues">
@@ -289,6 +287,7 @@ function App() {
               <span class="material-symbols-outlined">info</span>
                 Click on a measure to the right to see its data
             </div>
+            ⓘ Hover over a square to view the country's name and exposure value
           </div>
           <div className="exposureGraphWrapper">
             <div className="exposureGraphExplain">
@@ -351,12 +350,10 @@ function App() {
             <div className="precipAccent" />
           </div>
           <div className="instructions">
-            <span class="material-symbols-outlined">info</span>
-              Hover over a country to see its name, year of measurement, and precipitation change for that year
+            ⓘ Hover over a country to see its name, year of measurement, and precipitation change for that year
           </div>
           <div className="instructions">
-            <span class="material-symbols-outlined">info</span>
-              Click on a country to view the preciptation change over the entire time period
+            ⓘ Click on a country to view the preciptation change over the entire time period
           </div>
           <div className="globalTitle">Global Median Annual Precipitation Change</div>
           <div className="globalPrecipChange">
