@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/climatechanges/static/css/main.26c30d1f.css",
-    "main.js": "/climatechanges/static/js/main.9dbb44e5.js",
-    "static/js/453.ed3810f9.chunk.js": "/climatechanges/static/js/453.ed3810f9.chunk.js",
-    "static/media/globe_spinning.gif": "/climatechanges/static/media/globe_spinning.4b7acf73999186be8ea2.gif",
-    "static/media/deltaO1.png": "/climatechanges/static/media/deltaO1.9ac6cd87f931f52d5983.png",
-    "static/media/oxygenBG.jpg": "/climatechanges/static/media/oxygenBG.7af917fa07cf189414ea.jpg",
-    "static/media/blueBG.png": "/climatechanges/static/media/blueBG.3ca5e3c6c272f6c60a60.png",
-    "static/media/floodingBG.avif": "/climatechanges/static/media/floodingBG.0c0a257f6982fc0e03aa.avif",
-    "static/media/deltaO2.png": "/climatechanges/static/media/deltaO2.9d590ce28fa8772d99d0.png",
-    "static/media/deltaO4.png": "/climatechanges/static/media/deltaO4.1945889bc2ae4431f71c.png",
-    "static/media/deltaO3.png": "/climatechanges/static/media/deltaO3.0c6d21cee73f229a5432.png",
-    "index.html": "/climatechanges/index.html",
-    "main.26c30d1f.css.map": "/climatechanges/static/css/main.26c30d1f.css.map",
-    "main.9dbb44e5.js.map": "/climatechanges/static/js/main.9dbb44e5.js.map",
-    "453.ed3810f9.chunk.js.map": "/climatechanges/static/js/453.ed3810f9.chunk.js.map"
+    "main.css": "/climatechanges.github.io/static/css/main.8d7b657b.css",
+    "main.js": "/climatechanges.github.io/static/js/main.43ce2371.js",
+    "static/js/453.ed3810f9.chunk.js": "/climatechanges.github.io/static/js/453.ed3810f9.chunk.js",
+    "static/media/globe_spinning.gif": "/climatechanges.github.io/static/media/globe_spinning.4b7acf73999186be8ea2.gif",
+    "static/media/deltaO1.png": "/climatechanges.github.io/static/media/deltaO1.9ac6cd87f931f52d5983.png",
+    "static/media/oxygenBG.jpg": "/climatechanges.github.io/static/media/oxygenBG.7af917fa07cf189414ea.jpg",
+    "static/media/blueBG.png": "/climatechanges.github.io/static/media/blueBG.3ca5e3c6c272f6c60a60.png",
+    "static/media/floodingBG.avif": "/climatechanges.github.io/static/media/floodingBG.0c0a257f6982fc0e03aa.avif",
+    "static/media/deltaO2.png": "/climatechanges.github.io/static/media/deltaO2.9d590ce28fa8772d99d0.png",
+    "static/media/deltaO4.png": "/climatechanges.github.io/static/media/deltaO4.1945889bc2ae4431f71c.png",
+    "static/media/deltaO3.png": "/climatechanges.github.io/static/media/deltaO3.0c6d21cee73f229a5432.png",
+    "index.html": "/climatechanges.github.io/index.html",
+    "main.8d7b657b.css.map": "/climatechanges.github.io/static/css/main.8d7b657b.css.map",
+    "main.43ce2371.js.map": "/climatechanges.github.io/static/js/main.43ce2371.js.map",
+    "453.ed3810f9.chunk.js.map": "/climatechanges.github.io/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.26c30d1f.css",
-    "static/js/main.9dbb44e5.js"
+    "static/css/main.8d7b657b.css",
+    "static/js/main.43ce2371.js"
   ]
 }
