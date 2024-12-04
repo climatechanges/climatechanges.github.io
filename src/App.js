@@ -424,7 +424,7 @@ function App() {
           <div className="riskMainBox">
           </div>
             <div className="riskText">
-              The following map shows the anticipated climate risk level for each county in 2040-2049. The risk is made up of the amount of hazard, exposure, and vulnerability in each county. Click on a county to learn more about their specific risk as well as state-wide risk.
+              So, what effect is this going to have on you in the coming years? The following map shows the anticipated climate risk level for each county in 2040-2049. The risk is made up of the amount of hazard, exposure, and vulnerability in each county. Click on a county to learn more about their specific risk as well as state-wide risk.
             </div>
           <div className="riskAccent"/>
         </div>
