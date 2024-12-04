@@ -14,8 +14,6 @@ import deltaO1 from './deltaO1.png';
 import deltaO2 from './deltaO2.png';
 import deltaO3 from './deltaO3.png';
 import deltaO4 from './deltaO4.png';
-import deltaO5 from './deltaO5.png';
-
 
 function App() {
   // const sumOfExposureValuesOG = 'https://public.tableau.com/views/SumExposureMap/Dashboard12?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
@@ -126,12 +124,9 @@ function App() {
       const targetPosition2 = 1150.254 * window.innerHeight / 100;
       const targetPosition3 = 1300.254 * window.innerHeight / 100;
       const targetPosition4 = 1420.254 * window.innerHeight / 100;
-      const targetPosition5 = 1570.254 * window.innerHeight / 100;
-      const startEnd = 1600.254 * window.innerHeight / 100;
-      const end= 1650.254 * window.innerHeight / 100;
+      const startEnd = 1500.254 * window.innerHeight / 100;
+      const end= 1550.254 * window.innerHeight / 100;
       const deltaOVis = document.getElementById("deltaOViz");
-      // console.log(scrollBar + " " + targetPosition);
-      // console.log("window: " + window.innerHeight);
 
       let opacity = (scrollBar - targetPosition) / (endStart - targetPosition);
       opacity = Math.max(opacity, 0); 
@@ -152,10 +147,9 @@ function App() {
       if (scrollBar >= targetPosition || scrollBar + e.deltaY >= targetPosition)
       {
         scrollyDelta += e.deltaY;
-        // deltaOVis.style.opacity = 1;
         deltaOVis.style.position = 'fixed';
-        deltaOVis.style.top = '0';
-        deltaOVis.style.height = '50%';
+        deltaOVis.style.top = '-10vh';
+        deltaOVis.style.height = '70%';
 
         console.log(scrollBar + " " + (100 * this.window.innerHeight / 100));
         if (scrollBar >= targetPosition && scrollBar < targetPosition2)
@@ -170,13 +164,9 @@ function App() {
         {
           deltaOVis.src = deltaO3;
         }
-        if (scrollBar >= targetPosition4 && scrollBar < targetPosition5)
+        if (scrollBar >= targetPosition4)
         {
           deltaOVis.src = deltaO4;
-        }
-        if (scrollBar >= targetPosition5 )
-        {
-          deltaOVis.src = deltaO5;
         }
         if (scrollBar >= startEnd)
         {
@@ -389,14 +379,13 @@ function App() {
       <div className="oxygenIntro">
         <div className="oxygenText">
           <div className="text">
-            <bold>5-O-18 (δ18O)</bold> is a scientific measure used to understand past and present environmental conditions, particularly climate. 
-            The value is calculated as the deviation in ratio of stable isotopes oxygen-18 (18O) and oxygen-16 (16O). Water in warmer areas 
-            tends to have higher concentrations of 18O while areas in colder regions tend to have a higher density of 16O. This is because 
-            18O is heavier, and falls from clouds as rain before the clouds reach the colder polar regions. Delta-O-18 is like a natural 
-            thermometer that helps scientists reconstruct past temperatures and climate patterns. By analyzing δ¹⁸O in materials like ice 
-            cores, deep-sea sediment, and fossilized shells, scientists can infer how much water was locked in ice sheets or how warm the 
-            oceans and atmosphere were at different times. <bold>Lower δ¹⁸O values</bold> in polar ice, for instance, <bold>indicate colder periods</bold> when more 
-            ¹⁶O-rich snow accumulated. Conversely, <bold>higher δ¹⁸O values</bold> in ocean sediments suggest <bold>warmer eras</bold> with less ice and higher sea levels.
+            <bold>Delta-O-18 (δ18O)</bold> is a scientific measure used to understand past and present environmental conditions, particularly 
+            climate. The value is calculated as the deviation in ratio of stable isotopes oxygen-18 (18O) and oxygen-16 (16O). 
+            Water in warmer areas tends to have higher concentrations of 18O while areas in colder regions tend to have a higher 
+            density of 16O. This is because 18O is heavier, and falls from clouds as rain before the clouds reach the colder 
+            polar regions. By analyzing δ18O in materials like ice cores, deep-sea sediment, and fossilized shells, scientists 
+            can infer how warm the oceans and atmosphere were at different times. <bold>Higher δ18O</bold> values indicate <bold>colder periods</bold>, 
+            while <bold>lower δ18O</bold> values suggest <bold>warmer eras</bold> with less ice and higher sea levels.
           </div>
         </div>
         <div className="oxygenBG" />
@@ -412,15 +401,23 @@ function App() {
                   low δ¹⁸O values off the Northern coast of russia, a highly frozen glacial sea region.
                 </div>
                 <div className="oSection">
-                  This trend of low negative Delta-O-18 values is further seen if we create longitude and latitude bins, and look at the average Delta-O-18 values in the resulting grid.
+                  This trend of low negative Delta-O-18 values is more apparent if we create longitude and latitude bins, and look at the average 
+                  Delta-O-18 values in the resulting grid. Notice how again, it seems that towards the equator, the values are mostly normal, 
+                  but as the samples get closer to the north pole they trend more negative. These lower Delta-O-18 values indicate a deviation 
+                  from the typical 18O/16O ratio, potentially from melting polar ice.
                 </div>
                 <div className="oSection">
-                  We can also look at Delta-O-18 values by depth. The following visualization shows Delta-O-18 again binned by longitude, and organized by depth. Notice that the negative Delta-O-18 values are concentrated near the surface (depth equals zero).
+                  We can also look at Delta-O-18 values by depth. This visualization shows Delta-O-18 again binned by longitude, and 
+                  organized by depth. Negative Delta-O-18 values are represented as larger and more orange. Notice that the negative Delta-O-18 
+                  values are concentrated near the surface (depth equals zero).
                 </div>
                 <div className="oSection">
-                  We can also swap Longitude for Temperature, and look at average Delta-O-18 divided into Temperature and Depth regions. Looking at this breakdown, it is clear that the negative Delta-O-18 regions are mainly located near the surface in colder regions.                </div>
-                <div className="oSection">
-                  This suggests that in a very recent period, glacial ice has been melting at an increased rate than normal.                </div>
+                  We can also swap Longitude for Temperature, and look at average Delta-O-18 divided into Temperature and Depth regions. 
+                  Looking at this breakdown, it is clear that the negative Delta-O-18 regions are mainly located near the surface in colder 
+                  regions. This visualization also exposes that many of the higher Delta-O-18 samples are from below the surface, indicating a shift 
+                  away from colder years. Overall, the Delta-O-18 data suggests that in a relatively recent period, glacial ice has been 
+                  melting at an increased rate than normal.               
+                </div>
               </div>
             </div>
             <div className="deltaOVizFormat">

@@ -734,7 +734,7 @@ bold
 .deltaO
 {
   width: 100vw;
-  height: 700vh;
+  height: 590vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -780,7 +780,7 @@ bold
 .deltaOViz
 {
   width: 50%;
-  height: 10%;
+  height: 10vh;
   background-image: url('./deltaO1.png');
   background-size: 100% 100%;
   margin-top: 20vh;
@@ -829,7 +829,7 @@ bold
 .nationalStateRisk .tableauEmbed
 {
   width: 80vw !important;
-  height: 45vw !important;
+  height: 30vw !important;
 }
 
 .footer i
