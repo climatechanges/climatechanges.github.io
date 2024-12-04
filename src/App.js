@@ -42,7 +42,7 @@ function App() {
 
   window.onload = function() {
     window.scrollTo(0, 0);
-    // document.body.style.overflowY = 'hidden';
+    document.body.style.overflowY = 'hidden';
   }
 
   window.addEventListener('wheel', function(e) {
@@ -83,8 +83,8 @@ function App() {
         }
         else
         {
-            // blueCover.style.opacity = 0;
-            // blueCover.style.display = 'none';
+            blueCover.style.opacity = 0;
+            blueCover.style.display = 'none';
             earth.style.display = 'block';
         }
       
@@ -116,7 +116,7 @@ function App() {
         }
         else
         {
-            // document.body.style.overflowY = 'hidden';
+            document.body.style.overflowY = 'hidden';
         }
       }
 
@@ -202,9 +202,8 @@ function App() {
   
   return (
     <div className="App">
-      <div className="blueCover" id="blueCover" style={{opacity: 1}}>
+      <div className="blueCover" id="blueCover">
         <div className="textYearlyTempAnomolies">
-            {/* <img className="flamingEarth" src={flamingEarth}></img> */}
             <div className="ribbon">
               <div className="text">
                 Using the mean temperature of 1951-1980 as a baseline, it can be seen that in the years following, 
@@ -228,7 +227,7 @@ function App() {
             Climate in Motion
         </div>
         <div className="spinningEarth">
-            <img id="earth" className="earth" src={Earth} alt="Spinning Earth" style={{opacity: 0}}/>
+            <img id="earth" className="earth" src={Earth} alt="Spinning Earth"/>
         </div>
       </div>
       <div className="monthlyTempAnomolies">
