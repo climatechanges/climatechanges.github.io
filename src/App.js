@@ -121,14 +121,14 @@ function App() {
         }
       }
 
-      const endStart = 920.254 * window.innerHeight / 100;
-      const targetPosition = 887.254 * window.innerHeight / 100;
-      const targetPosition2 = 1030.254 * window.innerHeight / 100;
-      const targetPosition3 = 1160.254 * window.innerHeight / 100;
-      const targetPosition4 = 1300.254 * window.innerHeight / 100;
-      const targetPosition5 = 1450.254 * window.innerHeight / 100;
-      const startEnd = 1450.254 * window.innerHeight / 100;
-      const end= 1550.254 * window.innerHeight / 100;
+      const endStart = 1050.254 * window.innerHeight / 100;
+      const targetPosition = 990.254 * window.innerHeight / 100;
+      const targetPosition2 = 1150.254 * window.innerHeight / 100;
+      const targetPosition3 = 1300.254 * window.innerHeight / 100;
+      const targetPosition4 = 1420.254 * window.innerHeight / 100;
+      const targetPosition5 = 1570.254 * window.innerHeight / 100;
+      const startEnd = 1600.254 * window.innerHeight / 100;
+      const end= 1650.254 * window.innerHeight / 100;
       const deltaOVis = document.getElementById("deltaOViz");
       // console.log(scrollBar + " " + targetPosition);
       // console.log("window: " + window.innerHeight);
