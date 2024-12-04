@@ -281,14 +281,11 @@ function App() {
           <div className="summaryAccent" />
           <div className="instructions">
             <div>
-              <span class="material-symbols-outlined">info</span>
-                Hover over a square to view the country's name and exposure value
+              ⓘ Hover over a square to view the country's name and exposure value 
             </div>
             <div>
-              <span class="material-symbols-outlined">info</span>
-                Click on a measure to the right to see its data
+              ⓘ Click on a measure to the right to see its data
             </div>
-            ⓘ Hover over a square to view the country's name and exposure value
           </div>
           <div className="exposureGraphWrapper">
             <div className="exposureGraphExplain">
@@ -322,12 +319,10 @@ function App() {
         <div className="exposureAccent" />
         <div className="instructions">
           <div>
-            <span class="material-symbols-outlined">info</span>
-            Hover over a block to see the area's name and exposure value
+            ⓘ Hover over a block to see the area's name and exposure value
           </div>
           <div>
-            <span class="material-symbols-outlined">info</span>
-            Click on the [+] under Continent to see the data at a country level 
+            ⓘ Click on the [+] under Continent to see the data at a country level 
           </div>
         </div>
         <div className="sumOfExposureValues">
