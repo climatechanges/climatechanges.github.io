@@ -294,7 +294,7 @@ bold
 .exposureSums
 {
   width: 100vw;
-  height: 360vh;
+  height: 390vh;
 }
 
 .sumOfExposureValues
@@ -482,6 +482,22 @@ bold
 {
   margin-top: 5vh !important;
 } 
+
+.exposureValues
+{
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3vh;
+}
+
+.exposureValues .tableauEmbed
+{
+  width: 80vw !important;
+  height: 30vw !important;
+}
 
 .precipEffects
 {

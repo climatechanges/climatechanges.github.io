@@ -140,6 +140,15 @@ function App() {
 
       deltaOVis.style.opacity = opacity;
 
+      if (deltaOVis.style.opacity == 0)
+      {
+        deltaOVis.style.display = 'none';
+      }
+      else
+      {
+        deltaOVis.style.display = 'block';
+      }
+
       if (scrollBar >= targetPosition || scrollBar + e.deltaY >= targetPosition)
       {
         scrollyDelta += e.deltaY;
@@ -309,7 +318,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="exposureTextBlock">
+        <div className="exposureTextBlock" style={{marginTop: '15vh'}}>
           <div className="textSumOfExposureValues">
             On average, nations experienced 4.5 out of 9 of the measured events in 2022, revealing the vast and relentless reach of this crisis. 
             This stark reality shows that no nation, no matter its size or location, is untouched by our changing world. 
@@ -325,7 +334,7 @@ function App() {
             ⓘ Click on the [+] under Continent to see the data at a country level 
           </div>
         </div>
-        <div className="sumOfExposureValues">
+        <div className="exposureValues">
           <TableauEmbed url={exposureValues2022}></TableauEmbed>
         </div>
       </div>
