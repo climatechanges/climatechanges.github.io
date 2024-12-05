@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.32a97035.css",
-    "main.js": "/static/js/main.694ea731.js",
+    "main.css": "/static/css/main.29c4c853.css",
+    "main.js": "/static/js/main.b752e09c.js",
     "static/js/453.ed3810f9.chunk.js": "/static/js/453.ed3810f9.chunk.js",
     "static/media/globe_spinning.gif": "/static/media/globe_spinning.4b7acf73999186be8ea2.gif",
-    "static/media/deltaO1.png": "/static/media/deltaO1.507444830259e0230788.png",
-    "static/media/deltaO2.png": "/static/media/deltaO2.841831ca5fbcb52426da.png",
-    "static/media/deltaO3.png": "/static/media/deltaO3.5f68b25cc855b061ec09.png",
+    "static/media/deltaO1.png": "/static/media/deltaO1.5bc3f07290c67a5ff948.png",
+    "static/media/deltaO2.png": "/static/media/deltaO2.6399368acb424cb07b8e.png",
+    "static/media/deltaO3.png": "/static/media/deltaO3.943bb05c9d2c40d6fd45.png",
+    "static/media/deltaO4.png": "/static/media/deltaO4.5813cf4ea1803fbc2b54.png",
     "static/media/oxygenBG.jpg": "/static/media/oxygenBG.7af917fa07cf189414ea.jpg",
     "static/media/blueBG.png": "/static/media/blueBG.3ca5e3c6c272f6c60a60.png",
     "static/media/floodingBG.avif": "/static/media/floodingBG.0c0a257f6982fc0e03aa.avif",
-    "static/media/deltaO4.png": "/static/media/deltaO4.ac8533917dd448ef0aed.png",
     "index.html": "/index.html",
-    "main.32a97035.css.map": "/static/css/main.32a97035.css.map",
-    "main.694ea731.js.map": "/static/js/main.694ea731.js.map",
+    "main.29c4c853.css.map": "/static/css/main.29c4c853.css.map",
+    "main.b752e09c.js.map": "/static/js/main.b752e09c.js.map",
     "453.ed3810f9.chunk.js.map": "/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.32a97035.css",
-    "static/js/main.694ea731.js"
+    "static/css/main.29c4c853.css",
+    "static/js/main.b752e09c.js"
   ]
 }
