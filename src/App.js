@@ -333,14 +333,13 @@ function App() {
           <div className="precipTopBlock">
             <div className="precipExplain" />
               <div className="precipText" >
-                Text text text text text text text text text text text text Text text text text text text text text text text text text
-                Text text text text text text text text text text text text Text text text text text text text text text text text text
-                Text text text text text text text text text text text text Text text text text text text text text text text text text
-                Text text text text text text text text text text text text Text text text text text text text text text text text text
-                Text text text text text text text text text text text text Text text text text text text text text text text text text
-                Text text text text text text text text text text text text Text text text text text text text text text text text text
-                Text text text text text text text text text text text text Text text text text text text text text text text text text
-                Text text text text text text text text text text text text
+              Over the past 4 and a half decades, annual precipitation patterns have shifted dramatically across the globe, with some 
+              regions experiencing increased rainfall while others face prolonged droughts. These changes can have 
+              profound effects on ecosystems, agriculture, and human livelihoods. Too little precipitation can lead to 
+              water scarcity, crop failures, and desertification, devastating communities that rely on consistent 
+              rainfall for food and drinking water. Conversely, excessive precipitation can result in flooding, soil 
+              erosion, and the destruction of infrastructure, displacing millions and threatening food security in 
+              vulnerable regions. 
               </div>
             <div className="precipAccent" />
           </div>
@@ -348,7 +347,8 @@ function App() {
             ⓘ Hover over a country to see its name, year of measurement, and precipitation change for that year
           </div>
           <div className="instructions">
-            ⓘ Click on a country to view the preciptation change over the entire time period
+            ⓘ Click on a country to view the preciptation change over the entire time period in the area chart on the right, ctrl + click 
+            to select multiple regions
           </div>
           <div className="globalTitle">Global Median Annual Precipitation Change</div>
           <div className="globalPrecipChange">
@@ -359,12 +359,14 @@ function App() {
           <div className="cropTopBlock">
             <div className="cropText">
               <div className="text">
-                Text text text text text text text text text text text text Text text text text text text text text text text text text
-                Text text text text text text text text text text text text Text text text text text text text text text text text text
-                Text text text text text text text text text text text text Text text text text text text text text text text text text
-                Text text text text text text text text text text text text Text text text text text text text text text text text text
-                Text text text text text text text text text text text text Text text text text text text text text text text text text
-                Text text text text text text text text text text text text Text text text text text text text text text text text text 
+                Extreme precipitation events—intense rainfall or prolonged wet periods—pose significant threats to agricultural 
+                croplands worldwide. When croplands are exposed to these events, the excess water can lead to soil erosion, 
+                nutrient depletion, and waterlogging, all of which hinder crop growth and reduce yields. In regions dependent 
+                on agriculture for local food supplies and economic stability, these impacts can be devastating, leading to 
+                food insecurity, increased costs, and a loss of livelihoods. On a global scale, widespread crop damage from 
+                extreme precipitation disrupts food supply chains, drives up food prices, and exacerbates inequalities in 
+                access to resources. The graph below highlights the countries most affected by these events, underscoring the 
+                urgent need for climate resilience strategies in agriculture.
               </div>
             </div>
             <div className="cropAccent" />

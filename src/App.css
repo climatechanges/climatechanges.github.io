@@ -605,6 +605,7 @@ bold
   margin-left: 5vw;
   margin-right: 10vw;
   text-align: left;
+  line-height: 5vh;
 }
 
 .precip .instructions
@@ -618,13 +619,13 @@ bold
 .cropTopBlock
 {
   width: 100vw;
-  height: 22vh;
+  height: 32vh;
 }
 
 .cropText
 {
   width: 90%;
-  height: 20vh;
+  height: 30vh;
   background-color: #87CEEB;
   margin-left: 10vw;
   position: relative;
@@ -641,17 +642,17 @@ bold
 {
   width: 95%;
   margin-left: 2.5%;
-  margin-right: 2.5%;
+  margin-right: 3%;
 }
 
 .cropAccent
 {
   width: 91vw;
-  height: 18vh;
+  height: 28vh;
   background-color: #B0E0E6;
   position: absolute;
   z-index: 1;
-  margin-top: -16vh;
+  margin-top: -26vh;
   margin-left: 9vw;
 }
 
@@ -662,6 +663,7 @@ bold
   align-items: center;
   width: 100vw;
   height: 120vh;
+  margin-top: -10vh;
 }
 
 .cropPolaroid
