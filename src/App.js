@@ -229,9 +229,7 @@ function App() {
       </div>
       <div className="monthlyTempAnomolies">
         <div className="textMonthlyTempAnomoliesMagnitudes">
-          These graphs shows the change in temperature including month data. The graph on the left illustrates the increasing anomoly. On the right,
-          the farther away from the center the larger anomoly. As can be seen, recent years have greater anomolies and are less clustered. This suggests
-          a more rapid rate of change.
+        While certain months have larger anomalies than others in any given year, every month has increasing temperature based off of the baseline. These can lead to longer hotter summers, more frequent winter storms, and more droughts. Seasonal pattern differences such as these lead to eco-system disruption and food shortages. Additionally, anomalies are increasing at a faster rate, meaning more extreme environmental effects are expected.
         </div>
         <div className="bgMonthlyTempAnomoliesMagnitudes" />
         <div className="accentMonthlyTempAnomoliesMagnitudes" />
