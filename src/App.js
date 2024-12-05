@@ -133,7 +133,7 @@ function App() {
 
       deltaOVis.style.opacity = opacity;
 
-      if (deltaOVis.style.opacity === 0)
+      if (deltaOVis.style.opacity == 0)
       {
         deltaOVis.style.display = 'none';
       }
@@ -241,8 +241,8 @@ function App() {
       </div>
       <div className="exposureIntro">
         <div className="text">
-          The effects of climate change can take on a variety forms: rising temperature, changing precipitation patterns, more extreme weather like floods 
-          and storms. One way to understand the impact of these effects is to look at the percentage of population or land exposed. 
+          The effects of climate change can take on a variety forms: rising temperature, changing precipitation patterns, more extreme weather 
+          like floods and storms, etc. One way to understand the impact of these effects is to look at the percentage of population or land exposed. 
         </div>
         <div className="shadow" />
         <div className="bg" />
@@ -252,7 +252,7 @@ function App() {
             <div className="exposureTextBlock">
               <div className="textSumOfExposureValues">
               The Organization for Economic Cooperation and Development (OECD) monitors the exposure to various climate-related hazards in recent years for areas
-              word wide. Only one country had no exposure to any of the measured events in 2022: Tokelau.
+              word-wide. Only one country had no exposure to any of the measured events in 2022: Tokelau.
               </div>
             </div>
             <div className="exposureAccent"/>
@@ -357,7 +357,7 @@ function App() {
             <div className="cropText">
               <div className="text">
                 Extreme precipitation events—intense rainfall or prolonged wet periods—pose significant threats to agricultural 
-                croplands worldwide. When croplands are exposed to these events, the excess water can lead to soil erosion, 
+                croplands world-wide. When croplands are exposed to these events, the excess water can lead to soil erosion, 
                 nutrient depletion, and waterlogging, all of which hinder crop growth and reduce yields. In regions dependent 
                 on agriculture for local food supplies and economic stability, these impacts can be devastating, leading to 
                 food insecurity, increased costs, and a loss of livelihoods. On a global scale, widespread crop damage from 
@@ -378,7 +378,8 @@ function App() {
       <div className="oxygenIntro">
         <div className="oxygenText">
           <div className="text">
-            <bold>Delta-O-18 (δ18O)</bold> is a scientific measure used to understand past and present environmental conditions, particularly 
+            On the subject of precipitation, it can also indicate climate change based on its concentration of Delta-O-18. <bold>Delta-O-18 (δ18O)
+            </bold> is a scientific measure used to understand past and present environmental conditions, particularly 
             climate. The value is calculated as the deviation in ratio of stable isotopes oxygen-18 (18O) and oxygen-16 (16O). 
             Water in warmer areas tends to have higher concentrations of 18O while areas in colder regions tend to have a higher 
             density of 16O. This is because 18O is heavier, and falls from clouds as rain before the clouds reach the colder 
@@ -397,7 +398,7 @@ function App() {
                 <div className="oSection" style={{marginTop: '65vh'}}>
                   This map shows δ¹⁸O values calculated from a collection of over 26,000 seawater ¹⁸O values prepared by NASA. Overall, the values 
                   mostly sit around or above 0, indicating a normal, expected ratio of 18O and 16O. However, there is a noticeable patch of very 
-                  low δ¹⁸O values off the Northern coast of russia, a highly frozen glacial sea region.
+                  low δ¹⁸O values off the Northern coast of Russia, a highly frozen glacial sea region.
                 </div>
                 <div className="oSection">
                   This trend of low negative Delta-O-18 values is more apparent if we create longitude and latitude bins, and look at the average 
@@ -429,7 +430,9 @@ function App() {
           <div className="riskMainBox">
           </div>
             <div className="riskText">
-              So, what effect is this going to have on you in the coming years? The following map shows the anticipated climate risk level for each county in 2040-2049. The risk is made up of the amount of hazard, exposure, and vulnerability in each county. Click on a county to learn more about their specific risk as well as state-wide risk.
+              So, what effect is this going to have on you in the coming years? The following map shows the anticipated climate risk level for 
+              each county in 2040-2049. The risk is made up of the amount of hazard, exposure, and vulnerability in each county. Click on 
+              a county to learn more about their specific risk as well as state-wide risk.
             </div>
           <div className="riskAccent"/>
         </div>
