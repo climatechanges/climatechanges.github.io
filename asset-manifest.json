@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/%3Cclimatechanges.github.io%3E/static/css/main.15dc4582.css",
-    "main.js": "/%3Cclimatechanges.github.io%3E/static/js/main.ab2c8075.js",
+    "main.js": "/%3Cclimatechanges.github.io%3E/static/js/main.b2c08acf.js",
     "static/js/453.ed3810f9.chunk.js": "/%3Cclimatechanges.github.io%3E/static/js/453.ed3810f9.chunk.js",
     "static/media/globe_spinning.gif": "/%3Cclimatechanges.github.io%3E/static/media/globe_spinning.4b7acf73999186be8ea2.gif",
     "static/media/deltaO1.png": "/%3Cclimatechanges.github.io%3E/static/media/deltaO1.507444830259e0230788.png",
@@ -13,11 +13,11 @@
     "static/media/deltaO4.png": "/%3Cclimatechanges.github.io%3E/static/media/deltaO4.ac8533917dd448ef0aed.png",
     "index.html": "/%3Cclimatechanges.github.io%3E/index.html",
     "main.15dc4582.css.map": "/%3Cclimatechanges.github.io%3E/static/css/main.15dc4582.css.map",
-    "main.ab2c8075.js.map": "/%3Cclimatechanges.github.io%3E/static/js/main.ab2c8075.js.map",
+    "main.b2c08acf.js.map": "/%3Cclimatechanges.github.io%3E/static/js/main.b2c08acf.js.map",
     "453.ed3810f9.chunk.js.map": "/%3Cclimatechanges.github.io%3E/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.15dc4582.css",
-    "static/js/main.ab2c8075.js"
+    "static/js/main.b2c08acf.js"
   ]
 }
