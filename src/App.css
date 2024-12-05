@@ -811,9 +811,8 @@ bold
 .natRisk
 {
   width: 100vw;
-  height: 120vh;
+  height: 150vh;
   background-color: #ffe6e3;
-  /* background-color: #F7C6C7; */
   position: relative;
   z-index: 90;
 }
@@ -825,13 +824,13 @@ bold
   display: flex;
   justify-content: center;
   align-items: center;
-
+  margin-top: 15vh;
 }
 
 .nationalStateRisk .tableauEmbed
 {
   width: 80vw !important;
-  height: 30vw !important;
+  height: 40vw !important;
 }
 
 .footer i

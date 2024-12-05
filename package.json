@@ -1,5 +1,5 @@
 {
-  "homepage": "https://climatechanges.github.io/<climatechanges.github.io>",
+  "homepage": "https://climatechanges.github.io/",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -9,7 +9,6 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-is-visible": "^1.2.0",
     "react-scripts": "^5.0.1",
     "vega": "^5.30.0",
     "vega-embed": "^6.29.0",

@@ -8,8 +8,7 @@ import { forestWildfiresSpec, populationWildfiresSpec,
   landRiverFloodingSpec, landExtremePrecipitationSpec,
   landCoastalFloodingSpec} from './sanddanceSpecs.js'
 import Earth from './globe_spinning.gif';
-import { useState, useEffect, useRef } from 'react';
-import { useIsVisible } from 'react-is-visible';
+import { useState } from 'react';
 import deltaO1 from './deltaO1.png';
 import deltaO2 from './deltaO2.png';
 import deltaO3 from './deltaO3.png';
@@ -28,16 +27,15 @@ function App() {
   // const magnitudeOfTempAnomoliesByMonthOG = 'https://public.tableau.com/views/UniqueTemperatureVis/RadialChart?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link ';
   const monthlyTempAnomoliesMagnitudes = 'https://public.tableau.com/views/UniqueTemperatureVis_17330212511100/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
   // const monthlyTempAnomoliesMagnitudes = 'https://public.tableau.com/views/UniqueTemperatureVis_17330212511100/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
-  const nationalAndStateRiskLevelOG = 'https://public.tableau.com/shared/4NHP76KDY?:display_count=n&:origin=viz_share_link ';
+  // const nationalAndStateRiskLevelOG = 'https://public.tableau.com/shared/4NHP76KDY?:display_count=n&:origin=viz_share_link ';
   //const nationalAndStateRiskLevel = 'https://public.tableau.com/views/BetterMaps_17333238426540/Dashboard5?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
   const nationalAndStateRiskLevel = 'https://public.tableau.com/views/BetterMaps_17324144202350/Dashboard5?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link'
-  const precipitationAndTempChangesbyState = 'https://public.tableau.com/views/BetterMaps_17324144202350/ScatterPlotbyChanges?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
+  // const precipitationAndTempChangesbyState = 'https://public.tableau.com/views/BetterMaps_17324144202350/ScatterPlotbyChanges?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
   const medianAnnualPrecipitationChange = 'https://public.tableau.com/views/Group_Project_17330019467830/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
   const mediaCroplandExposure = 'https://public.tableau.com/views/Group_Project_17330019467830/Sheet5?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link';
   let scale = 1;
   let offsetX = 0; 
   let distanceX = 0;
-  let scrollyDelta = 0;
 
   window.onload = function() {
     window.scrollTo(0, 0);
@@ -135,7 +133,7 @@ function App() {
 
       deltaOVis.style.opacity = opacity;
 
-      if (deltaOVis.style.opacity == 0)
+      if (deltaOVis.style.opacity === 0)
       {
         deltaOVis.style.display = 'none';
       }
@@ -146,7 +144,6 @@ function App() {
 
       if (scrollBar >= targetPosition || scrollBar + e.deltaY >= targetPosition)
       {
-        scrollyDelta += e.deltaY;
         deltaOVis.style.position = 'fixed';
         deltaOVis.style.top = '-10vh';
         deltaOVis.style.height = '70%';
