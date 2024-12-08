@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.196a5526.css",
-    "main.js": "/static/js/main.b564f4c4.js",
+    "main.js": "/static/js/main.c23ce26e.js",
     "static/js/453.ed3810f9.chunk.js": "/static/js/453.ed3810f9.chunk.js",
     "static/media/globe_spinning.gif": "/static/media/globe_spinning.4b7acf73999186be8ea2.gif",
     "static/media/deltaO1.png": "/static/media/deltaO1.5bc3f07290c67a5ff948.png",
@@ -13,11 +13,11 @@
     "static/media/floodingBG.avif": "/static/media/floodingBG.0c0a257f6982fc0e03aa.avif",
     "index.html": "/index.html",
     "main.196a5526.css.map": "/static/css/main.196a5526.css.map",
-    "main.b564f4c4.js.map": "/static/js/main.b564f4c4.js.map",
+    "main.c23ce26e.js.map": "/static/js/main.c23ce26e.js.map",
     "453.ed3810f9.chunk.js.map": "/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.196a5526.css",
-    "static/js/main.b564f4c4.js"
+    "static/js/main.c23ce26e.js"
   ]
 }
